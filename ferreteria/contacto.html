@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferretería El Tornillo | Contacto</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="logo">🔧 Ferretería <span>El Tornillo</span></a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="pagina-titulo">
+      <h1>Contáctanos</h1>
+      <p>Completa el formulario y nuestro equipo te responderá a la brevedad.</p>
+    </section>
+
+    <section class="contacto-seccion">
+      <form id="form-contacto" novalidate>
+
+        <div class="campo">
+          <label for="nombre">Nombre completo</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            autocomplete="name"
+            placeholder="Ej: Juan Pérez González"
+            aria-describedby="error-nombre"
+            required>
+          <span class="error" id="error-nombre" role="alert"></span>
+        </div>
+
+        <div class="campo">
+          <label for="rut">RUT</label>
+          <input
+            type="text"
+            id="rut"
+            name="rut"
+            autocomplete="off"
+            placeholder="Ej: 12.345.678-9"
+            aria-describedby="error-rut ayuda-rut"
+            required>
+          <small id="ayuda-rut">Ingresa tu RUT con guión y dígito verificador.</small>
+          <span class="error" id="error-rut" role="alert"></span>
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo electrónico</label>
+          <input
+            type="email"
+            id="correo"
+            name="correo"
+            autocomplete="email"
+            placeholder="Ej: correo@dominio.cl"
+            aria-describedby="error-correo"
+            required>
+          <span class="error" id="error-correo" role="alert"></span>
+        </div>
+
+        <div class="campo">
+          <label for="telefono">Teléfono</label>
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            autocomplete="tel"
+            placeholder="Ej: +56 9 1234 5678"
+            aria-describedby="error-telefono"
+            required>
+          <span class="error" id="error-telefono" role="alert"></span>
+        </div>
+
+        <div class="campo">
+          <label for="comuna">Comuna</label>
+          <input
+            type="text"
+            id="comuna"
+            name="comuna"
+            list="lista-comunas"
+            autocomplete="address-level2"
+            placeholder="Escribe o selecciona tu comuna"
+            aria-describedby="error-comuna"
+            required>
+          <datalist id="lista-comunas">
+            <option value="Puente Alto"></option>
+            <option value="La Florida"></option>
+            <option value="Maipú"></option>
+            <option value="Santiago"></option>
+            <option value="Providencia"></option>
+            <option value="San Bernardo"></option>
+            <option value="Ñuñoa"></option>
+          </datalist>
+          <span class="error" id="error-comuna" role="alert"></span>
+        </div>
+
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="5"
+            placeholder="Cuéntanos qué necesitas..."
+            aria-describedby="error-mensaje"
+            required></textarea>
+          <span class="error" id="error-mensaje" role="alert"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primario">Enviar mensaje</button>
+
+        <p id="mensaje-exito" class="exito" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div>
+        <h3>Ferretería El Tornillo</h3>
+        <p>Av. Las Industrias 1234, Puente Alto, Santiago</p>
+        <p>Lunes a sábado: 09:00 - 19:00 hrs</p>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <p>Teléfono: +56 9 1234 5678</p>
+        <p>Email: contacto@eltornillo.cl</p>
+      </div>
+      <nav aria-label="Enlaces del pie de página">
+        <h3>Enlaces</h3>
+        <ul class="footer-nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="copyright">&copy; 2026 Ferretería El Tornillo. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/validaciones.js"></script>
+</body>
+</html>
